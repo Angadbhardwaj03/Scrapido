@@ -1,0 +1,84 @@
+/* src/pages/WorkerDashboard.css */
+.worker-dashboard .stats-grid-worker {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.stat-card-worker {
+    background: var(--white);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.stat-icon-worker { font-size: 1.8rem; padding: 15px; border-radius: 50%; color: white; }
+.stat-icon-worker.households { background-color: #0077b6; }
+.stat-icon-worker.completed { background-color: var(--primary-color); }
+.stat-icon-worker.pending { background-color: var(--accent-color); }
+.stat-icon-worker.hazardous { background-color: var(--danger-color); }
+
+.stat-info-worker h3 { font-size: 0.9rem; color: var(--text-light); margin-bottom: 5px; }
+.stat-info-worker p { font-size: 1.6rem; font-weight: 700; color: var(--primary-dark); }
+
+.main-worker-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 25px;
+    margin-top: 30px;
+    align-items: flex-start;
+}
+
+.dashboard-card-worker {
+    background: var(--white);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.dashboard-card-worker h3 { color: var(--primary-dark); margin-bottom: 20px; }
+
+.route-list ul { list-style: none; }
+.route-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+.route-item.pending { background-color: #fff8e1; }
+.route-item.completed { background-color: #e8f5e9; text-decoration: line-through; color: #aaa; }
+.route-item.hazardous-item { border-left: 4px solid var(--danger-color); }
+.route-item span svg { margin-left: 5px; color: var(--danger-color); }
+
+.route-item button {
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.route-item button:disabled { background: #ced4da; cursor: not-allowed; }
+
+.map-placeholder-worker {
+    height: 450px;
+    background: #e9ecef url('https://i.imgur.com/gKHYwRz.png') no-repeat center center/cover;
+    border-radius: 8px;
+    position: relative;
+    color: var(--text-light);
+    font-weight: 600;
+}
+.worker-truck-icon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-dark);
+}

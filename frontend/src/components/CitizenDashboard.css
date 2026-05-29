@@ -1,0 +1,180 @@
+/* src/pages/CitizenDashboard.css */
+.citizen-dashboard .dashboard-header {
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.top-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.info-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.eta-card {
+    background: linear-gradient(135deg, var(--primary-dark), #3a5a68);
+    color: var(--white);
+}
+.eta-icon {
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+.eta-text p {
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+.eta-text h3 {
+    font-size: 2rem;
+}
+
+.tutorial-card {
+    justify-content: space-between;
+}
+.tutorial-button {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+.tutorial-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(42, 157, 143, 0.3);
+}
+
+.main-citizen-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.dashboard-card-citizen {
+    background: var(--white);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.dashboard-card-citizen h3 {
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+.collection-subtitle {
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.waste-type-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.waste-card {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #e9ecef;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+.waste-card.active {
+    opacity: 1;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.waste-card.dry { border-color: #0077b6; }
+.waste-card.wet { border-color: #2a9d8f; }
+.waste-card.hazardous { border-color: #e76f51; }
+
+.waste-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.waste-card.dry .waste-icon { color: #0077b6; }
+.waste-card.wet .waste-icon { color: #2a9d8f; }
+.waste-card.hazardous .waste-icon { color: #e76f51; }
+
+.bag-info {
+    font-weight: 600;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.status-badge {
+    background: #e8f5e9;
+    color: #2a9d8f;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-top: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.waste-card.hazardous .status-badge {
+    background-color: #fce4e1;
+    color: #e76f51;
+}
+
+.map-placeholder-citizen {
+    height: 400px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e9ecef;
+}
+
+.truck-icon {
+    font-size: 3rem;
+    position: absolute;
+    left: 10%;
+    top: 40%;
+    animation: drive 20s linear infinite;
+}
+
+.your-location-pin {
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@keyframes drive {
+    0% { left: -10%; }
+    100% { left: 110%; }
+}
+
+@media (max-width: 992px) {
+    .main-citizen-grid {
+        grid-template-columns: 1fr;
+    }
+    .waste-type-cards {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,51 @@
+/* src/pages/MCDDashboard.css */
+.main-mcd-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.dashboard-card-mcd {
+    background: var(--white);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.dashboard-card-mcd h3 { color: var(--primary-dark); margin-bottom: 20px; }
+
+.worker-status-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.worker-status-list th, .worker-status-list td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+.worker-status-list th { font-weight: 600; }
+.worker-status-list tbody tr:last-child td { border-bottom: none; }
+
+.worker-status-list td::before {
+    content: '●';
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+.status-on-route td::before { color: #2a9d8f; }
+.status-on-break td::before { color: #f4a261; }
+.status-completed td::before { color: #ced4da; }
+
+.right-column-mcd {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.map-placeholder-mcd {
+    height: 250px;
+    background: #e9ecef;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    color: var(--text-light);
+}
